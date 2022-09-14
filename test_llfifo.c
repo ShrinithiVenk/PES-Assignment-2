@@ -1,13 +1,8 @@
-//#include"llfifo.h"
 #include"test_llfifo.h"
-
-
-
 
 void test_llfifo(){
 
     //FIFO 1 - Element Enqueue Dequeue Testcases
-    //
     llfifo_t *my_fifo = llfifo_create(5);
     assert (llfifo_length(my_fifo) == 0);
     assert (llfifo_capacity(my_fifo) == 5);
@@ -31,7 +26,7 @@ void test_llfifo(){
     assert(b == NULL);
     free(my_fifo);
 
-    // //FIFO 2 Length and capacity testcases
+    //FIFO 2 Length and capacity testcases
     llfifo_t *my_fifo1 = llfifo_create(3);
     int arr[5] = {3,4,5,6,7};
     assert(llfifo_length(my_fifo1)==0);
@@ -48,7 +43,7 @@ void test_llfifo(){
     free(my_fifo1);
 
 
-    // //FIFO 3 Example testcases
+    //FIFO 3 Example testcases
     llfifo_t *my_fifo2 = llfifo_create(5);
     assert (llfifo_length(my_fifo2) == 0);
     assert (llfifo_capacity(my_fifo2) == 5);
@@ -84,4 +79,3 @@ void test_llfifo(){
         assert(*(ptr+i)==marr[j][i]);
         }
 }
-
